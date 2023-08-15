@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="Admin_AdminMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+ <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            text-align: center;
+        }
+     </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+            <table cellpadding="0" cellspacing="0" class="style1">
+                <tr>
+                    <td valign="top" 
+                        style="font-family: Arial; font-size: medium; font-weight: bold; font-style: normal; color: #FFFFFF; background-color: #000099; border: thin solid #000000">
+                        <br />
+                        <h1 class="style2">
+                             ONLINE MOBILE PHONE SHOPPING</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-family: Arial; font-size: medium; font-weight: bold; color: #000000; background-color: #0000FF; border-style: none solid solid solid; border-width: thin; border-color: #000000" 
+                        valign="top">
+                        <asp:Menu ID="Menu1" runat="server" ForeColor="White" Orientation="Horizontal">
+                            <DynamicMenuItemStyle BackColor="#FF66CC" ForeColor="White" ItemSpacing="5px" />
+                            <Items>
+                                <asp:MenuItem Text="HOME" Value="HOME"></asp:MenuItem>
+                                <asp:MenuItem Text="MASTER" Value="CATEGORY">
+                                    <asp:MenuItem Text="CATEGORY MASTER" Value="CATEGORY MASTER" 
+                                        NavigateUrl="~/Admin/CategoryMaster.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="COMPANY MASTER" Value="COMPANY MASTER" 
+                                        NavigateUrl="~/Admin/CompanyMaster.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="COMPANY CATEGORY MAPPING" Value="COMPANY CATEGORY MAPPING" 
+                                        NavigateUrl="~/Admin/CompanyCategoryMapping.aspx">
+                                    </asp:MenuItem>
+                                    <asp:MenuItem Text="PRODUCT MASTER" Value="PRODUCT DETAILS" 
+                                        NavigateUrl="~/Admin/ProductDetails.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="VIEW ORDER" Value="CONTACT US" 
+                                    NavigateUrl="~/Admin/ViewOrder.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="CHANGE PASSWORD" Value="FEEDBACK" 
+                                    NavigateUrl="~/Admin/ChangePassword.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="FEEDBACK" Value="FEEDBACK" 
+                                    NavigateUrl="~/Admin/Feedback.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="LOGOUT" Value="LOGOUT" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                            </Items>
+                            <StaticMenuItemStyle BackColor="#FF66CC" ForeColor="White" 
+                                HorizontalPadding="40px" ItemSpacing="8px" VerticalPadding="5px" />
+                            <StaticMenuStyle HorizontalPadding="50px" VerticalPadding="10px" />
+                        </asp:Menu>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-family: Arial; font-size: medium; font-weight: bold; font-style: normal; color: #FFFFFF; background-color: #0000FF; border-style: none solid solid solid; border-width: thin; border-color: #000000" 
+                        valign="top">
+                        Welcome ,<asp:Label ID="lblusername" runat="server"></asp:Label>
+                       </td>
+                </tr>
+                <tr>
+                    <td>
+                                           
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                 <div style=" min-height:400px; vertical-align:top">
+                 </div>
+                        </asp:ContentPlaceHolder>
+                                           
+                        </td>
+                </tr>
+                <tr>
+                    <td style="font-family: Arial; font-size: medium; font-weight: bold; font-style: normal; font-variant: normal; color: #FFFFFF; background-color: #000080; border-style: none solid solid solid; border-width: thin; border-color: #000000" 
+                        valign="bottom" class="style2">
+                        Designed&amp;Developed By Aarati&Qurret Alein</td>
+                </tr>
+            </table>
+        
+        </div>
+    </form>
+</body>
+</html>
